@@ -3,17 +3,37 @@ import './Media.css';
 import PropTypes from 'prop-types';
 
 class Media extends Component {
-  /*inicia forma de  asignar el vento a los props con EMAS6*/ 
+
+  state = {
+      author : 'Author inicial',
+      title: 'title inicial',
+      image: 'image inicial'
+  }
   /*
   constructor(props){
     super(props)
+    this.state = {
+      author: props.author,
+      title: props.title,
+      image: props.image
+    }*/
+     /*inicia forma de  asignar el vento a los props con EMAS6*/ 
+     /*
     this.handleClick = this.handleClick.bind(this);
-  } 
-  */
-  /*fin  forma de  asignar el vento a los props con EMAS6*/ 
+    */
+   /*fin  forma de  asignar el vento a los props con EMAS6*/ 
+
+  /*} */
+  
 
   handleClick = (event) => {
-    console.log(this.props);
+    console.log(event);
+   
+    this.setState({
+      author : 'Author ciclo de vida',
+      title: 'title ciclo de vida',
+      image: 'image ciclo de vida'
+    })
   }
  
   render() {
@@ -21,8 +41,8 @@ class Media extends Component {
       <div className='Media' onClick={this.handleClick}>
           <div className="Media-cover">
               <img src={this.props.image} alt="" width={260} height={160} className="Media-image"/>
-              <h3 className="Media-title">{ this.props.title}</h3>
-              <p className="Media-author">{ this.props.author}</p>
+              <h3 className="Media-title">{ this.state.title}</h3>
+              <p className="Media-author">{ this.state.author}</p>
           </div>
       </div>
     )
