@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Media.css';
-
-export default class Media extends Component {
+import PropTypes from 'prop-types';
+class Media extends Component {
  
   render() {
     
@@ -16,3 +16,12 @@ export default class Media extends Component {
     )
   }
 }
+
+Media.propTypes = {
+  image:PropTypes.string.isRequired,
+  title:PropTypes.string.isRequired,
+  author:PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['video', 'audio'])
+}
+
+export default Media;

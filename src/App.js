@@ -8,7 +8,8 @@ class App extends Component {
         <Media 
           title='este es un titulo prueba ...' 
           author='Ricardo Lugo Recillas'
-          image="img/covers/bitcoin.jpg"/>
+          image="img/covers/bitcoin.jpg"
+          type="video"/>
       </div>
     );
   }
