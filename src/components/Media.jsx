@@ -40,7 +40,7 @@ class Media extends Component {
     return (
       <div className='Media' onClick={this.handleClick}>
           <div className="Media-cover">
-              <img src={this.props.image} alt="" width={260} height={160} className="Media-image"/>
+              <img src={this.props.image} alt=""  width={260} height={160} className="Media-image"/>
               <h3 className="Media-title">{ this.state.title}</h3>
               <p className="Media-author">{ this.state.author}</p>
           </div>
