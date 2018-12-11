@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Media from './components/Media';
+import Playlist from './components/Playlist';
+import data from './data/api.json';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Media 
-          title='este es un titulo prueba ...' 
-          author='Ricardo Lugo Recillas'
-          image="img/covers/bitcoin.jpg"
-          type="video"/>
-      </div>
+    
+        <Playlist data={data} />
+    
     );
   }
 }
