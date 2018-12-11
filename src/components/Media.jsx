@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import './Media.css';
 
 export default class Media extends Component {
+ 
   render() {
     
     return (
       <div className='Media'>
           <div className="Media-cover">
-              <img src="img/covers/bitcoin.jpg" alt="" width={260} height={160} className="Media-image"/>
-              <h3 className="Media-title">Titulo</h3>
-              <p className="Media-author">nombre del autor</p>
+              <img src={this.props.image} alt="" width={260} height={160} className="Media-image"/>
+              <h3 className="Media-title">{ this.props.title}</h3>
+              <p className="Media-author">{ this.props.author}</p>
           </div>
       </div>
     )

@@ -5,7 +5,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Media />
+        <Media 
+          title='este es un titulo prueba ...' 
+          author='Ricardo Lugo Recillas'
+          image="img/covers/bitcoin.jpg"/>
       </div>
     );
   }
