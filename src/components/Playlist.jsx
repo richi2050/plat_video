@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Media from './Media';
 import './Playlist.css';
 
-export class Playlist extends Component {
-  render() {
-      const playlist = this.props.data.categories[0].playlist;
+function Playlist (props){
+      const playlist = props.data.categories[0].playlist;
     return (
       <div className='Playlist'>
           {
@@ -17,11 +16,7 @@ export class Playlist extends Component {
                     type={item.type}/>
               })
           }
-          
-        
       </div>
     )
-  }
 }
-
 export default Playlist
