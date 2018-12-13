@@ -5,10 +5,11 @@ import data from '../../../data/api.json'
 import Related from '../components/Related';
 import ModalContainer from '../../widgets/containers/Modal-container'
 import Modal from '../../widgets/components/Modal'
+import HandleError from '../../errors/containers/Handel-error'
 
 export class Home extends Component {
   state = {
-    modalVisible : false
+    modalVisible : false,
   }
 
   handleOpenModal = (event) => {
@@ -22,21 +23,26 @@ export class Home extends Component {
       modalVisible:false,
     })
   }
+
+  
+
   render() {
+  
     return (
-     <HomeLayout >
-       <Related />
-       <Categories categories={data.categories} handleOpenModal={this.handleOpenModal}/>
-       {
-         this.state.modalVisible &&
-          <ModalContainer>
-              <Modal handleClick={this.handleCloseModalClick}>
-              Esto es desde el componente modal
-              </Modal>
-          </ModalContainer>
-      }
-       
-     </HomeLayout>
+      <HandleError>
+        <HomeLayout >
+        <Related />
+        <Categories categories={data.categories} handleOpenModal={this.handleOpenModal}/>
+        {
+          this.state.modalVisible &&
+            <ModalContainer>
+                <Modal handleClick={this.handleCloseModalClick}>
+                Esto es desde el componente modal
+                </Modal>
+            </ModalContainer>
+        }
+      </HomeLayout>
+     </HandleError>
     )
   }
 }
