@@ -10,6 +10,7 @@ function Playlist (props){
           {
               props.playlist.map((item) => {
                     return <Media 
+                    handleClick={props.handleOpenModal}
                     key={item.id}
                     title={item.title}
                     author={item.author}

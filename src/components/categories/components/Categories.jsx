@@ -6,7 +6,7 @@ export default function Categories(props) {
   return (
     <div className='Categories'>
       {props.categories.map((item) =>{
-          return <Category key={item.id} {...item}/>
+          return <Category handleOpenModal={props.handleOpenModal} key={item.id} {...item}/>
       })}
     </div>
   )
